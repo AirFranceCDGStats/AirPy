@@ -12,7 +12,7 @@ setup(
     description="AirPy, un wrapper pour l'API d'Air France KML. Permet de récupérer les vols au départ et à destinations de CDG.",
     long_description=description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AirFranceCDGStats/AirPy"
+    url="https://github.com/AirFranceCDGStats/AirPy",
     project_urls={
         "Documentation": "https://github.com/AirFranceCDGStats/AirPy",
         "Issue tracker": "https://github.com/AirFranceCDGStats/AirPy/issues",
