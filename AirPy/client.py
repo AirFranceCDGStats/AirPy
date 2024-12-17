@@ -6,7 +6,7 @@ from typing import Literal
 
 
 class AirPyClient:
-    def __init__(self, key: str, session: ClientSession) -> None:
+    def __init__(self, key: str, session: ClientSession, logs: Logger = None) -> None:
         """
         Initialise la classe AirPyClient
 
@@ -15,12 +15,14 @@ class AirPyClient:
         :param logs: Logs
         """
         self.key = key[:8]
+
         self.__headers = {
             **__headers__,
             "Api-Key": key
         }
 
-        logs = Logger("requests")
+        if not logs:
+            logs = Logger("requests")
 
         self.client = AirPyRequests(headers=self.__headers, session=session, logs=logs)
 
